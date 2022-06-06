@@ -1,25 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/Link";
 import styles from "../styles/Home.module.css";
-import { styled } from "@mui/material/styles";
 
-import { Grid, Paper, Stack, Typography } from "@mui/material";
-
-import Table from "../src/components/Table/Table";
-import DropDown from "../src/components/DropDown/DropDown";
-
-import {
-    TwitterTimelineEmbed,
-    TwitterShareButton,
-    TwitterFollowButton,
-    TwitterHashtagButton,
-    TwitterMentionButton,
-    TwitterTweetEmbed,
-    TwitterMomentShare,
-    TwitterDMButton,
-    TwitterVideoEmbed,
-    TwitterOnAirButton,
-} from "react-twitter-embed";
+import Button from "@mui/material/Button";
 
 export default function Home() {
     return (
@@ -30,33 +13,15 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Grid container spacing={2}>
-                <Grid
-                    item
-                    xs={5}
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "80%",
-                    }}>
-                    <div style={{ width: "60%" }}>
-                        <TwitterTweetEmbed tweetId={"1531785997574348800"} />
-                    </div>
-                </Grid>
-                <Grid
-                    item
-                    xs={7}
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}>
-                    <Paper sx={{ backgroundColor: "#1A2027", height: "500px", width: "100%" }}>
-                        <Table />
-                    </Paper>
-                </Grid>
-            </Grid>
+            <div>
+                <Link href="/retweeters/1529643878155841537">
+                    <Button
+                        variant="outlined"
+                        sx={{ backgroundColor: "#fff", "&:hover": { backgroundColor: "#fff" } }}>
+                        Retweeters
+                    </Button>
+                </Link>
+            </div>
         </div>
     );
 }
