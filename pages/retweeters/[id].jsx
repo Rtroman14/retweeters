@@ -12,6 +12,7 @@ import { useLocalStorage, writeStorage, deleteFromStorage } from "@rehooks/local
 
 export default function Retweeters() {
     const router = useRouter();
+
     const { id } = router.query;
 
     const [loading, setLoading] = useState(false);
