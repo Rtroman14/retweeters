@@ -37,15 +37,7 @@ export default function Retweeters() {
 
             setLoading(false);
         }
-    }, [id]);
-
-    const handleClick = () => {
-        console.log({ retweeterStorage });
-    };
-
-    const handleDelete = () => {
-        deleteFromStorage();
-    };
+    }, [id, retweeterStorage]);
 
     return (
         <div className={styles.container}>

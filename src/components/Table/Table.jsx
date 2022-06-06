@@ -55,7 +55,7 @@ const columns = [
 ];
 
 export default function DataGridDemo({ retweeters, loading }) {
-    const rows = retweeters.map((user) => ({
+    const rows = retweeters?.map((user) => ({
         id: user.username,
         name: user.name,
         username: user.username,
