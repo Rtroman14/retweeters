@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-import { Grid, Paper, Skeleton, Button } from "@mui/material";
+import { Grid, Paper, Skeleton } from "@mui/material";
 
 import styles from "../../styles/Home.module.css";
 
@@ -25,7 +25,7 @@ export default function Retweeters() {
 
             let domain = "http://localhost:3000";
             if (process.env.NODE_ENV === "production") {
-                domain = "";
+                domain = "https://zuku-retweeters.vercel.app";
             }
 
             if (retweeterStorage === null) {
